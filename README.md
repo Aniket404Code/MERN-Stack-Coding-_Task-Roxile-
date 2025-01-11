@@ -12,7 +12,7 @@ To create an API to initialize the database with the seed data fetched from the 
 6. Iterate through the JSON data and insert each product as a new document into the "products" collection/table.
 7. Send a response to the client indicating the success or failure of the database initialization.
 
-## 2. `Create an API for transactions`
+## 2. `Create an API to list transactions`
 1. API should support search and pagination on product transactions
 2. Based on the value of search parameters, it should match search text on product
    title/description/price and based on matching result it should return the product
