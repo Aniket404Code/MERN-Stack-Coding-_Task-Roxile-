@@ -12,7 +12,16 @@ To create an API to initialize the database with the seed data fetched from the 
 6. Iterate through the JSON data and insert each product as a new document into the "products" collection/table.
 7. Send a response to the client indicating the success or failure of the database initialization.
 
-## 2. `Create an API for statistics`
+## 2. `Create an API for transactions'
+1. API should support search and pagination on product transactions
+2. Based on the value of search parameters, it should match search text on product
+   title/description/price and based on matching result it should return the product
+   transactions.
+3. If search parameter is empty then based on applied pagination it should return all the
+   records of that page number
+4. Default pagination values will be like page = 1, per page = 10
+
+## 3. `Create an API for statistics`
 ### - Total sale amount of selected month
 ### - Total number of sold items of selected month
 ### - Total number of not sold items of selected month
@@ -27,7 +36,7 @@ The task is to create an API that takes a month as input (in the format of a str
 
 For example, if the API is called with "June" as the input month, it should query the data source and return the total sale amount, total number of sold items, and total number of not sold items for the month of June across all years in the data source.
 
-## 3. `Create an API for bar chart`
+## 4. `Create an API for bar chart`
 ### The response should contain price range and the number of items in that range for the selected month regardless of the year.
 #### - 0 - 100
 #### - 101 - 200
@@ -59,7 +68,7 @@ The API should query the data source for all items sold in the specified month, 
 
 For example, if the API is called with "September" as the input month, it should query the data source and return a JSON object with ten key-value pairs, each representing a different price range and the number of items sold in that range during September (across all years in the data source). The front-end developer can then use this data to create a bar chart that shows the distribution of item prices for the selected month.
 
-## 4. `Create an API for pie chart`
+## 5. `Create an API for pie chart`
 ### Find unique categories and number of items from that category for the selected month regardless of the year.
 ### For example :
 ### - X category : 20 (items)
@@ -78,7 +87,7 @@ This means that in the month of April, across all years in the data source, ther
 
 The API should be able to handle any input month and return the unique categories and number of items sold in that month, regardless of the year. This information can be useful for tracking which categories are most popular in a given month and can inform inventory management and marketing strategies.
 
-## 5. `Combination responses of APIs`
+## 6. `Combination responses of APIs`
 ### Create an API which fetches the data from all the 3 APIs mentioned above, combines the response and sends a final response of the combined JSON.
 The task is to create an API that combines the responses of the three APIs mentioned above and sends a final response as a combined JSON object.
 
